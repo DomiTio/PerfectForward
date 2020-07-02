@@ -6,8 +6,14 @@
 #include <utility>
 
 struct A {
-    A(int&& n) { std::cout << "rvalue overload, n=" << n << "\n"; }
-    A(int& n) { std::cout << "lvalue overload, n=" << n << "\n"; }
+    A(int&& n) 
+    { 
+        std::cout << "rvalue overload, n=" << n << "\n"; 
+    }
+    A(int& n) 
+    { 
+        std::cout << "lvalue overload, n=" << n << "\n";
+    }
 };
 
 class B {
